@@ -1,3 +1,4 @@
+
 #include "main.h"
 
 /**
@@ -16,7 +17,6 @@ int (*get_builtin(char *cmd))(data_shell *)
 		{ "help", get_help },
 		{ NULL, NULL }
 	};
-
 	int i;
 
 	for (i = 0; builtin[i].name; i++)
