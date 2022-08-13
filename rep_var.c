@@ -36,6 +36,7 @@ void check_env(r_var **h, char *in, data_shell *data)
 	for (j = 0; in[j]; j++)
 	{
 		if (in[j] == ' ' || in[j] == '\t' || in[j] == ';' || in[j] == '\n')
+			break;
 	}
 
 	add_rvar_node(h, j, NULL, 0);

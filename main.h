@@ -75,8 +75,20 @@ typedef struct line_list_s
  * @next: next node
  * Description: single linked list to store variables
  */
-
 typedef struct r_var_list
+{
+	int len_var;
+	char *val;
+	int len_val;
+	struct r_var_list *next;
+} r_var;
+
+/**
+ * struct builtin_s - Builtin struct for command args.
+ * @name: The name of the command builtin i.e cd, exit, env
+ * @f: data type pointer function.
+ */
+typedef struct builtin_t
 {
 	char *name;
 	int (*f)(data_shell *datash);
